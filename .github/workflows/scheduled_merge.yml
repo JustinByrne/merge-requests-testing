@@ -16,7 +16,6 @@ jobs:
       - uses: gr2m/merge-schedule-action@v2
         with:
           merge_method: merge
-          time_zone: "Europe/London"
           require_statuses_success: "true"
           automerge_fail_label: "merge-schedule-failed"
         env:
