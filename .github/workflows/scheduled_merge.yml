@@ -7,7 +7,8 @@ on:
       - edited
       - synchronize
   schedule:
-    - cron: "0 * * * *"
+    # https://crontab.guru/every-hour
+    - cron: '0 * * * *'
 
 jobs:
   merge_schedule:
@@ -15,8 +16,8 @@ jobs:
     steps:
       - uses: gr2m/merge-schedule-action@v2
         with:
-          merge_method: merge
           time_zone: "Europe/London"
+          merge_method: merge
           require_statuses_success: "true"
           automerge_fail_label: "merge-schedule-failed"
         env:
